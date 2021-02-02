@@ -1,0 +1,30 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "budgetName": {
+      "value": "budget1"
+    },
+    "startDate": {
+      "value": "YYYY-MM-DD"
+    },
+    "endDate": {
+      "value": "YYYY-MM-DD"
+    },
+    "timeGrain": {
+      "value": "Monthly"
+    },
+    "amount": {
+      "value": "10"
+      }
+    },
+    "firstThreshold": {
+        "value": "10"
+    },
+    "contactEmails": {
+        "value": [
+            "chris@broccolifamily.net"
+        ]      
+      }
+    }
+  }
