@@ -70,32 +70,16 @@
       "metadata": {
         "description": "The list of email addresses to send the budget notification to when the threshold is exceeded."
       }
-    },
-    "contactGroups": {
-      "type": "array",
-      "metadata": {
-        "description": "The list of action groups to send the budget notification to when the threshold is exceeded. It accepts array of strings."
-      }
-    },
-    "resourceGroupFilterValues": {
-      "type": "array",
-      "metadata": {
-        "description": "The set of values for the first filter"
-      }
-    },
-    "meterCategoryFilterValues": {
-      "type": "array",
-      "metadata": {
-        "description": "The set of values for the second filter"
-      }
     }
   },
-  "variables": {},
+  "variables": {
+    "uniquebudgetName": "[concat(parameters('amount'), '-', parameters('firstThreshold'), '-budget')]"
+  },
   "resources": [
     {
       "type": "Microsoft.Consumption/budgets",
       "apiVersion": "2019-10-01",
-      "name": "[parameters('budgetName')]",
+      "name": "[variables('uniquebudgetName')]",
       "properties": {
         "timePeriod": {
           "startDate": "2021-02-01T00:00:00Z",
@@ -109,9 +93,7 @@
             "enabled": true,
             "operator": "GreaterThan",
             "threshold": "[parameters('firstThreshold')]",
-            "contactEmails": "[parameters('contactEmails')]",
-            "contactRoles": "[parameters('contactRoles')]",
-            "contactGroups": "[parameters('contactGroups')]"
+            "contactEmails": "[parameters('contactEmails')]"
           }
         }
       }
