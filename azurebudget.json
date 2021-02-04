@@ -98,8 +98,8 @@
       "name": "[parameters('budgetName')]",
       "properties": {
         "timePeriod": {
-          "startDate": "[parameters('startDate')]",
-          "endDate": "[parameters('endDate')]"
+          "startDate": "2021-02-01T00:00:00Z",
+          "endDate": "2022-02-01T00:00:00Z"
         },
         "timeGrain": "[parameters('timeGrain')]",
         "amount": "[parameters('amount')]",
@@ -109,8 +109,10 @@
             "enabled": true,
             "operator": "GreaterThan",
             "threshold": "[parameters('firstThreshold')]",
-            "contactEmails": "[parameters('contactEmails')]"
-          },
+            "contactEmails": "[parameters('contactEmails')]",
+            "contactRoles": "[parameters('contactRoles')]",
+            "contactGroups": "[parameters('contactGroups')]"
+          }
         }
       }
     }
