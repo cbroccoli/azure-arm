@@ -6,17 +6,16 @@
       "value": "budget1"
     },
     "startDate": {
-      "value": "2021-02-01"
+      "value": "2021-02-01T00:00:00Z"
     },
     "endDate": {
-      "value": "2021-12-31"
+      "value": "2022-02-01T00:00:00Z"
     },
     "timeGrain": {
       "value": "Monthly"
     },
     "amount": {
       "value": "10"
-      }
     },
     "firstThreshold": {
         "value": "10"
