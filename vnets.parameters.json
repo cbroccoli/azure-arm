@@ -1,0 +1,33 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "subscription": {
+            "value": "8285b049-a202-4de7-bb06-554d8a62fe48"
+        },
+        "resourcegroup": {
+            "value": "SpokeRG1"
+        },
+        "vnetName": {
+            "value": "management"
+        },
+        "vnetAddressPrefix": {
+            "value": "10.0.0.0/8"
+        },
+        "subnet1Prefix": {
+            "value": "10.1.0.0/24"
+        },
+        "subnet1Name": {
+            "value": "DMZ"
+        },
+        "subnet2Prefix": {
+            "value": "10.2.0.0/24"
+        },
+        "subnet2Name": {
+            "value": "Backend"
+        },
+        "location": {
+            "value": "westeurope"
+        }
+    }
+}

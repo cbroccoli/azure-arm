@@ -1,0 +1,15 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "subscriptionAliasName": {
+          "value": "management"
+        },
+        "billingScope": {
+        "value": "e66a5946-995a-5605-9c71-fd40e42882cd:076e4b17-d8cd-4f53-9300-ca97e6a28547_2019-05-31"
+        },
+        "targetManagementGroup": {
+        "value": "Platform"
+        }
+    }
+}
